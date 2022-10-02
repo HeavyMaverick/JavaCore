@@ -1,12 +1,13 @@
 package source;
 
-public class GameRunner extends GameLogic {
+public class GameRunner {
     public static void main(String[] args){
+        GameLogic gamelogic = new GameLogic();
         do {
-            PlayerItem();
-            WinOrLose();
+            gamelogic.getPlayerItem();
+            gamelogic.getWin();
         }
-        while (GameLogic.Restart() > 0);
+        while (gamelogic.restart() > 0);
     }
 
 }
